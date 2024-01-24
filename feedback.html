@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - Modern Design</title>
+    <link rel="stylesheet" href="stylesheets/feedback.css">
+</head>
+<body>
+
+    <header>
+        <h1 class="home"><a href="homepage.html">Home</a></h1>
+        <h1>Feedback - Connect Learn Hub</h1>
+    </header>
+
+    <section>
+        <h2>We value your feedback!</h2>
+        <p>Let us know how we're doing. Your input helps us improve.</p>
+
+        <form class="add">
+            <label for="name">Your Name:</label>
+            <input type="text" name="name" id="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" name="email" id="email" required>
+
+            <label for="feedback">Your Feedback:</label>
+            <textarea name="feedback" id="feedback" rows="4" required></textarea>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </section>
+
+    <footer>
+        &copy; 2024 Connect Learn Hub. All rights reserved.
+    </footer>
+
+    <script type="module" src="scripts/feedback.js"></script>
+
+    <!-- <script src="scripts/feedback.js"></script> -->
+    <!-- <script type="module">
+        // import { initializeApp } from 'firebase/app'
+        // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+
+import {
+    getFirestore, collection, getDocs
+
+} from 'firebase/firestore'
+
+const firebaseConfig = {
+    apiKey: "AIzaSyB1eWvOt5ddgKIP1mWb_B7BTm6RItGNtjA",
+    authDomain: "connect-learn-hub.firebaseapp.com",
+    projectId: "connect-learn-hub",
+    storageBucket: "connect-learn-hub.appspot.com",
+    messagingSenderId: "560070615109",
+    appId: "1:560070615109:web:e5c1da87857ff1569b832c"
+  };
+
+
+
+
+//init firebase app
+firebase.initializeApp(firebaseConfig)
+
+//init services
+const db = getFirestore()
+
+
+//collection ref
+const colRef = collection(db, 'feedbacks')
+
+
+//get collection data
+
+getDocs(colRef)
+  .then((snapshot) => {
+    console.log(snapshot.docs)
+  })
+
+
+    </script> -->
+
+
+<!-- ------------------------------------------------------------------------------------------------------ -->
+
+    <!-- <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from './firebase/app';
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+
+
+        import {
+            getFirestore, collection, getDocs
+
+        } from 'firebase/app'
+        const firebaseConfig = {
+          apiKey: "AIzaSyB1eWvOt5ddgKIP1mWb_B7BTm6RItGNtjA",
+          authDomain: "connect-learn-hub.firebaseapp.com",
+          projectId: "connect-learn-hub",
+          storageBucket: "connect-learn-hub.appspot.com",
+          messagingSenderId: "560070615109",
+          appId: "1:560070615109:web:e5c1da87857ff1569b832c"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+
+
+        //init services
+        const db = getFirestore()
+
+
+        //collection ref
+        const colRef = collection(db, 'feedbacks');
+
+
+        //get collection data
+
+        getDocs(colRef)
+            .then((snapshot) => {
+            // console.log(snapshot.docs)
+            let feedbacks = [];
+            snapshots.docs.forEach((doc) =>{
+                feedbacks.push({ ...doc.data(), id: doc.id})
+            })
+            console.log(feedbacks)
+        })
+        .catch(err => {
+            console.log(err.message)
+        })
+
+      </script> -->
+
+      
+
+</body>
+</html>

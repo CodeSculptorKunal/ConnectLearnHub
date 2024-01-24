@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doubt Section</title>
+    <link rel="stylesheet" href="stylesheets/doubtsection.css">
+</head>
+<body>
+
+<header>
+    <h1>Doubt Section</h1>
+</header>
+
+<main>
+    <div class="doubt-form">
+        <textarea placeholder="Ask your doubt..." rows="4"></textarea>
+        <button onclick="submitDoubt()">Submit Doubt</button>
+    </div>
+
+    <div class="doubts-container" id="doubtsContainer">
+        <!-- Doubts will be dynamically added here -->
+    </div>
+</main>
+
+<script>
+    function submitDoubt() {
+        // This is a placeholder function; you'd typically handle doubt submission with server-side or client-side scripting
+        const doubtTextarea = document.querySelector('textarea');
+        const doubtsContainer = document.getElementById('doubtsContainer');
+
+        if (doubtTextarea.value.trim() !== "") {
+            const newDoubt = document.createElement('div');
+            newDoubt.className = 'doubt';
+            newDoubt.textContent = doubtTextarea.value;
+            doubtsContainer.appendChild(newDoubt);
+
+            // Clear the textarea after submitting doubt
+            doubtTextarea.value = "";
+        }
+    }
+</script>
+
+<script>
+    // Load existing doubts from localStorage on page load
+    document.addEventListener('DOMContentLoaded', function () {
+        loadDoubts();
+    });
+
+    function submitDoubt() {
+        const doubtTextarea = document.querySelector('textarea');
+        const doubtsContainer = document.getElementById('doubtsContainer');
+
+        if (doubtTextarea.value.trim() !== "") {
+            // Get current date and time
+            const currentDate = new Date();
+            const formattedDate = currentDate.toLocaleString();
+
+            // Create a new doubt object
+            const newDoubt = {
+                text: doubtTextarea.value,
+                date: formattedDate,
+            };
+
+            // Save the new doubt to localStorage
+            saveDoubt(newDoubt);
+
+            // Display the new doubt
+            displayDoubt(newDoubt, doubtsContainer);
+
+            // Clear the textarea after submitting doubt
+            doubtTextarea.value = "";
+        }
+    }
+
+    function saveDoubt(doubt) {
+        // Retrieve existing doubts from localStorage
+        const existingDoubts = JSON.parse(localStorage.getItem('doubts')) || [];
+
+        // Add the new doubt to the array
+        existingDoubts.push(doubt);
+
+        // Save the updated array back to localStorage
+        localStorage.setItem('doubts', JSON.stringify(existingDoubts));
+    }
+
+    function loadDoubts() {
+        // Retrieve existing doubts from localStorage
+        const existingDoubts = JSON.parse(localStorage.getItem('doubts')) || [];
+        const doubtsContainer = document.getElementById('doubtsContainer');
+
+        // Display each doubt
+        existingDoubts.forEach(function (doubt, index) {
+            displayDoubt(doubt, doubtsContainer, index);
+        });
+    }
+
+    function displayDoubt(doubt, container, index) {
+        // Create a new doubt element
+        const newDoubt = document.createElement('div');
+        newDoubt.className = 'doubt';
+        newDoubt.textContent = `${doubt.text} - ${doubt.date}`;
+
+        // Create a delete button for each doubt
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Delete';
+        deleteButton.className = 'delete-button';
+        deleteButton.addEventListener('click', function () {
+            deleteDoubt(index);
+        });
+
+        // Append the delete button to the doubt element
+        newDoubt.appendChild(deleteButton);
+
+        // Append the new doubt to the container
+        container.appendChild(newDoubt);
+    }
+
+    function deleteDoubt(index) {
+        // Retrieve existing doubts from localStorage
+        const existingDoubts = JSON.parse(localStorage.getItem('doubts')) || [];
+
+        // Remove the doubt at the specified index
+        existingDoubts.splice(index, 1);
+
+        // Save the updated array back to localStorage
+        localStorage.setItem('doubts', JSON.stringify(existingDoubts));
+
+        // Reload doubts after deletion
+        refreshDoubts();
+    }
+
+    function refreshDoubts() {
+        const doubtsContainer = document.getElementById('doubtsContainer');
+        doubtsContainer.innerHTML = '';
+        loadDoubts();
+    }
+</script>
+
+
+</body>
+</html>

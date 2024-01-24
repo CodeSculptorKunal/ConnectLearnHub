@@ -1,0 +1,193 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero{
+    height: 100vh;
+    background-image: url(images/signup1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.signup-box{
+    position: absolute;
+    top: 12%;
+    left: 11%;
+    height: 550px;
+    width: 1200px;
+    /* background-color: rgba(128, 247, 136, 0.577); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1{
+    position: absolute;
+    left: 40%;
+    top: 3%;
+    color: white;
+}
+
+.left-box{
+    height: 100%;
+    width: 800px;
+    display: flex;
+}
+
+.left-box .form-box{
+    display: flex;
+}
+
+.left-box .left-l{
+    height: 100%;
+    width: 400px;
+    background-color: rgb(0, 0, 0);
+}
+
+.left-box .left-r{
+    height: 100%;
+    width: 400px;
+    background-color: rgb(0, 0, 0);
+    
+}
+
+.hero .left-l h3{
+    color: white;
+    font-size: 2em;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 10px;
+ 
+}
+
+.input-field{
+    display: block;
+    width: 90%;
+    padding: 10px;
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin: 40px 4px;
+    background: transparent;
+    color: white;
+}
+
+.left-l label,h4{
+    margin-left: 15px;
+    color: white;
+    line-height: 35px;
+    size: 2em;
+}
+
+::placeholder{
+    color: white;
+}
+
+.left-r .input-field[type=text]{
+    margin-top: 86px;
+}
+
+.left-r label{
+    color: white;
+    margin-top: 10px;
+    margin-left: 3px;
+}
+
+.left-r input[type=date]{
+    width: 90%;
+    padding: 10px;
+    margin-left: 3px;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    background-color: #ffffff;
+    outline: none;
+    border: none;
+    margin-top: 17px;
+}
+
+.left-box .left-r button{
+    /* position: absolute; */
+    padding: 10px;
+    margin-top: 60px;
+    margin-left: 3px;
+    background-color: transparent;
+    color: white;
+    width: 95%;
+    font-size: 20px;
+    outline: none;
+    border: 1px solid white;
+    transition-duration: 0.5s;
+}
+
+.left-box .left-r button:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid white;
+}
+
+.left-r .terms{
+    color: white;
+    font-size: 1em;
+    margin-top: 25px;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+#terms{
+    margin-right: 20px;
+}
+
+
+.right-box{
+    height: 100%;
+    width: 400px;
+    background-color: rgb(255, 255, 255);
+
+}
+
+.right-box a{
+    display: block;
+    margin: 10px 25px;
+    padding: 18px;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.socio-icons{
+    margin-top: 42%;
+}
+
+.right-box .socio-icons a i{
+    color: white;
+    font-size: 26px;
+    margin-right: 5px;
+}
+
+.fb-link{
+    background-color: #1778f2;
+}
+
+.t-link{
+    background-color: #1da1f2;
+}
+
+.g-link{
+    background-color: #ea4335;
+}
+
+.login-msg{
+    position: relative;
+    color: white;
+    top: 90%;
+    left: 40%;
+}
+
+.login-msg a{
+    text-decoration: none;
+    color: white;
+}

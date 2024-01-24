@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheets/signup.css">
+    <script src="https://kit.fontawesome.com/6b6e1db783.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="hero">
+        <h1>Create new account</h1>
+
+        <div class="signup-box">
+
+            <div class="left-box">
+                <form action="" class="form-box">
+                    <div class="left-l">
+                        <h3>Sign Up</h3>
+                        <input type="text" placeholder="Full Name" class="input-field" required>
+                        <input type="email" name="email" id="" placeholder="Email" class="input-field" required>
+                        <input type="password" placeholder="Create Password" class="input-field" required>
+                        <input type="password" name="password" placeholder="Confirm Password" class="input-field" required>
+                        <h4>Gender</h4>
+                        <label for="g-male">Male</label>
+                        <input type="radio" id="g-male" name="gender" required>
+                        <label for="g-female">Female</label>
+                        <input type="radio" id="g-female" name="gender" required>
+
+
+                    </div>
+
+                    <div class="left-r">
+                        <input type="text" placeholder="User Name" class="input-field" required> 
+                        <input type="number" placeholder="Enter 10-Digit Phone Number" class="input-field" required>
+                        <label for="date">Date Of Birth</label>
+                        <input type="date" id="date" required>
+                        <label for="terms" class="terms"><input type="checkbox" id="terms">Agree to the Terms & Conditions</label>
+                        <button type="submit" class="sub-btn">SIGN UP</button>
+                    </div>
+                </form>
+            </div>
+            <div class="right-box">
+                <div class="socio-icons">
+                    <a href="" class="fb-link"><i class="fa-brands fa-facebook-f"></i> Connect with Facebook</a>
+                    <a href="" class="t-link"><i class="fa-brands fa-twitter"></i> Connect with Twitter</a>
+                    <a href="" class="g-link"><i class="fa-brands fa-google"></i> Connect with Google</a>
+                </div>
+            </div>
+
+        </div> 
+        <p class="login-msg">I already have an account? <a href="login.html">Login Now</a></p>
+        
+        
+    </div>
+    <script type="module" src="scripts/signup.js"></script>
+    
+</body>
+</html>

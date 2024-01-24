@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>userdashboard</title>
+    <link rel="stylesheet" href="stylesheets/userdashboard.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+</head>
+<body>
+    
+    <section class="header">
+        <div class="navigation-upper-portion">
+            <h1>Welcome to Connect Learn Hub</h1>
+        </div>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" id="navbar-box">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Profile</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="upload.html">Upload Files</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Materials
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="easysem.html">Easy Semester</a></li>
+                      <li><a class="dropdown-item" href="hardsem.html">Hard Semester</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Additional Courses</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="http://127.0.0.1:5500/doubtsection.html">Doubt Section</a>
+                  </li>
+                  <button class="logout-button">Logout</button>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+        </nav>
+        <div class="todo-bar">
+          <div class="wave-container">
+              <div class="decorative-icon">📝</div>
+              <div class="todo-heading">Create To-Do</div>
+              <div class="todo-description">Start organizing your day and improving productivity with a to-do list. Click the button below to get started!</div>
+              <button class="todo-button" onclick="openNewPage()">Create</button>
+          </div>
+      </div>
+
+      <div class="container-quote">
+        <div id="quote-container">
+            <p id="quote-text"></p>
+        </div>
+        <button id="generate-btn" onclick="generateQuote()">Generate Quote</button>
+      </div>
+
+      <div class="video-bar">
+        <div class="video-heading">Explore Video Lectures</div>
+        <div class="video-description">Enhance your knowledge with our collection of informative video lectures. Click the button below to start learning!</div>
+        <button class="video-button" onclick="openVideoPage()">Watch Now</button>
+      </div>
+
+
+
+        <video autoplay loop class="video-background" muted plays-inline>
+
+            <source src="videos/bg-3.mp4" type="video/mp4">
+
+
+        </video>
+
+
+    </section>
+    <section class="child-donate">
+      <img src="images/math-unicorn-donate-collage.png" alt="">
+      <div class="child-text">
+        <h2>TOGETHER WE CAN MAKE A DIFFERENCE</h2>
+        <h1>Every child deserves the chance to learn.</h1>
+        <p>Across the globe, 617 million children are missing basic math and reading skills. We’re a nonprofit delivering the education they need, and we need your help. You can change the course of a child’s life.</p>
+        
+      </div>
+
+      
+    </section>
+
+
+
+
+
+    <footer class="footer">
+      <div class="column">
+          <div class="decorative-icon">🌐</div>
+          <h2>Introduction</h2>
+          <a href="#">About Us</a>
+          <a href="#">Forum Rules</a>
+          <a href="#">Community Guidelines</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Privacy Policy</a>
+      </div>
+  
+      <div class="column">
+          <div class="decorative-icon">🚀</div>
+          <h2>Navigation</h2>
+          <a href="#">Forum Categories</a>
+          <a href="#">Latest Discussions</a>
+          <a href="#">Popular Topics</a>
+          <a href="#">Member Directory</a>
+          <a href="#">Featured Threads</a>
+      </div>
+  
+      <div class="column">
+          <div class="decorative-icon">🤝</div>
+          <h2>User Interaction</h2>
+          <a href="#">Moderator Information</a>
+          <a href="#">Report Abuse</a>
+          <a href="#">Member Testimonials</a>
+          <a href="#">Events and Meetups</a>
+          <a href="#">How to Use the Forum</a>
+      </div>
+  
+      <div class="column">
+          <div class="decorative-icon">📚</div>
+          <h2>Resources</h2>
+          <a href="#">Featured Products</a>
+          <a href="#">Resources and Tools</a>
+          <a href="#">Forum Blog</a>
+          <a href="#">Partnered Communities</a>
+          <a href="#">Polls and Surveys</a>
+      </div>
+  </footer>
+  
+  <div class="footer-info">
+      &copy; 2024 Forum Website. All rights reserved.
+  </div>
+  
+
+      
+  <script>
+    function openVideoPage() {
+        // Customize this function to navigate to the desired video lectures page
+        alert("Opening video lectures page!");
+    }
+  </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script type="module" src="scripts/userdashboard.js"></script>
+    <script>
+      function openNewPage() {
+          window.location.href = "http://127.0.0.1:5500/todo.html"
+      }
+  </script>
+  <script>
+    function generateQuote() {
+        fetch('https://api.quotable.io/random?tags=education')
+            .then(response => response.json())
+            .then(data => {
+                const quoteText = document.getElementById("quote-text");
+                quoteText.textContent = `"${data.content}" - ${data.author}`;
+            })
+            .catch(error => console.error('Error fetching quote:', error));
+    }
+
+    // Generate an educational quote initially
+    generateQuote();
+
+    // Update the quote at equal intervals (e.g., every 10 seconds)
+    setInterval(generateQuote, 10000); // 10000 milliseconds = 10 seconds
+</script>
+</body>
+</html>

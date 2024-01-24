@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload Page</title>
+    <link rel="stylesheet" href="stylesheets/upload.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Your Website Name</h1>
+        <div class="upload-section">
+            <div class="upload-btn-wrapper">
+                <button class="btn">Choose a file</button>
+                <input type="file" name="file" id="file" required></input>
+            </div>
+            <span class="file-name">No file chosen</span>
+        </div>
+        <form action="#" method="post" enctype="multipart/form-data">
+            <button type="submit" class="btn">Upload</button>
+        </form>
+        <div class="quotes">
+            <p>"Education is the passport to the future, for tomorrow belongs to those who prepare for it today." - Malcolm X</p>
+            <p>"Forums are like a treasure trove of knowledge, where minds converge to share and learn."</p>
+        </div>
+        <button class="back-btn" onclick="goBack()">Back</button>
+       
+    </div>
+
+    <script>
+        document.getElementById("file").addEventListener("change", function () {
+            const fileName = this.files[0].name;
+            document.querySelector(".file-name").textContent = fileName;
+        });
+
+        function goBack() {
+            window.location.href = ("http://127.0.0.1:5500/userdashboard.html");
+        }
+
+        
+    </script>
+    <script type="module" src="scripts/upload.js"></script>
+</body>
+</html>
